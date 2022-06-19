@@ -10,7 +10,7 @@ public enum Roman {
     LXXI(71), LXXII(72), LXXIII(73), LXXIV(74), LXXV(75), LXXVI(76), LXXVII(77),LXXVIII(78), LXXIX(79), LXXX(80),
     LXXXI(81), LXXXII(82), LXXXIII(83), LXXXIV(84), LXXXV(85), LXXXVI(86), LXXXVII(87), LXXXVIII(88), LXXXIX(89), XC(90),
     XCI(91), XCII(92),XCIII(93),XCIV(94),XCV(95), XCVI(96), XCVII(97), XCVIII(98), XCIX(99), C(100);
-    int number;
+    final int number;
     Roman (int number){
         this.number = number;
     }

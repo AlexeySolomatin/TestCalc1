@@ -26,23 +26,20 @@ class Main {
         if (operationCount == 1 && isNumeric(strings[0]) && isNumeric(strings[1])) {
             int split1 = Integer.parseInt(strings[0].trim());
             int split2 = Integer.parseInt(strings[1].trim());
-            String result = String.valueOf(calculated(split1, split2, operation));
-            return result;
+            return String.valueOf(calculated(split1, split2, operation));
         } else if (operationCount == 1 && isEnum(strings[0]) && isEnum(strings[1])) {
             Roman roman1 = Roman.valueOf(strings[0].trim());
             Roman roman2 = Roman.valueOf(strings[1].trim());
             int split1 = roman1.getNumber();
             int split2 = roman2.getNumber();
             int resultRoman = calculated(split1, split2, operation);
-            String result = String.valueOf(Roman.getRomanByInt(resultRoman));
-            return result;
+            return String.valueOf(Roman.getRomanByInt(resultRoman));
         }
         throw new IllegalArgumentException("Не верный формат выражения");
     }
     public static boolean isNumeric(String string) {
         try {
-            int intValue;
-            intValue = Integer.parseInt(string);
+            int intValue = Integer.parseInt(string);
             return true;
         } catch (NumberFormatException e) {
         }
@@ -50,8 +47,7 @@ class Main {
     }
     public static boolean isEnum(String string) {
         try {
-            Roman roman;
-            roman = Roman.valueOf(string);
+            Roman roman = Roman.valueOf(string);
             return true;
         } catch (IllegalArgumentException e) {
         }
@@ -61,18 +57,10 @@ class Main {
         int result = 0;
         if(operand1 > 0 && operand1 < 11 && operand2 > 0 && operand2 < 11){
             switch (operator) {
-                case '+':
-                    result = operand1 + operand2;
-                    break;
-                case '-':
-                    result = operand1 - operand2;
-                    break;
-                case '*':
-                    result = operand1 * operand2;
-                    break;
-                case '/':
-                    result = operand1 / operand2;
-                    break;
+                case '+' -> result = operand1 + operand2;
+                case '-' -> result = operand1 - operand2;
+                case '*' -> result = operand1 * operand2;
+                case '/' -> result = operand1 / operand2;
             }
             return result;
         }
