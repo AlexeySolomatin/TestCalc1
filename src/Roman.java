@@ -23,7 +23,6 @@ public enum Roman {
                 return roman;
             }
         }
-        return null;
-        //throw new IllegalArgumentException("No enum found with number");
+        throw new IllegalArgumentException("Не верный формат выражения");
     }
 }
