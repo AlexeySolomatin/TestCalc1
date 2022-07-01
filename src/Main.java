@@ -1,13 +1,11 @@
 import java.util.Scanner;
-public class Calculator {
+class Main {
     public static void main(String[] args){
         System.out.println("Введите арифметическое выражение");
         Scanner scanner = new Scanner(System.in);
         String userInput = scanner.nextLine();
         System.out.println(Main.calc(userInput));
     }
-}
-class Main {
     static char operation;
     static int operationCount;
     public static String calc(String input) {
